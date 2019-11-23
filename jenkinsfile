@@ -5,11 +5,27 @@ pipeline{
 		CI = 'true'
 		}
 		stages{
+<<<<<<< HEAD
 		stage('Install dependencies')
 		{		
 		steps
 		{
 		 sh 'npm install'
+=======
+		stage('Install dependencies'){
+
+		steps{
+		 sh 'npm install'
+				}
+				}
+					stage('Build')
+				{
+				steps{
+					sh 'npm run build'
+					}
+				        }
+
+>>>>>>> b81d5afb837d8d72cd89c6cdc8cb454680916485
 		}
 		}
 		stage('Build')
